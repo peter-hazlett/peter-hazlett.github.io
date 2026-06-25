@@ -247,16 +247,15 @@ a.school-salve {
    RESEARCH PAGE
    ------------------------------------------------------------------------- */
 
-/* Full-width presenting-photo banner atop the page (option A). Scoped to
-   .research-banner so it affects no other image. The photo crops to a band. */
+/* Full-width presenting-photo banner atop the page. The image is pre-cropped to
+   the desired framing, so we display it whole (natural aspect ratio) — no further
+   CSS cropping. Scoped to .research-banner so it affects no other image. */
 .research-banner {
   margin: 0 0 2rem;
 }
 .research-banner img {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: center 36%; /* crop start so first readable slide line is "The Church of England's..." */
+  height: auto;
   border-radius: 8px;
   display: block;
 }

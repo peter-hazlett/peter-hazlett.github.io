@@ -8,7 +8,7 @@ nav_order: 2
 ---
 
 <figure class="research-banner">
-  {% include figure.liquid path="assets/img/research-presentation.jpg" class="img-fluid" alt="Presenting research at a conference" %}
+  {% include figure.liquid path="assets/img/research-presentation.png" class="img-fluid" alt="Presenting research at a conference" %}
 </figure>
 
 <div class="publications">
