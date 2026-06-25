@@ -3,23 +3,19 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+first_name: Peter
+middle_name: K.
+last_name: Hazlett
+contact_note: # (intentionally blank — was "The best way to reach me is by email.")
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+  Peter K. Hazlett — Assistant Professor of Economics at Salve Regina University. Applied microeconomist working in political economy, economic history, and law and economics.
+footer_text: # removed Jekyll/al-folio/GitHub attribution; footer keeps only the copyright line
+keywords: Peter Hazlett, economics, political economy, economic history, law and economics, Salve Regina University
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 📈 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://peterhazlett.com # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -255,7 +251,7 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
+  # - jekyll-jupyter-notebook   # disabled for local preview — requires Python/jupyter; not needed for an academic site
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
@@ -341,8 +337,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Hazlett]
+  first_name: [Peter, Peter K., P. K.]
 
   style: apa
   locale: en
@@ -362,7 +358,7 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
+  group_by: none # no year sub-headers; the Research page groups by type_group instead
   group_order: descending
 
 # Display different badges withs stats for your publications
@@ -531,7 +527,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Sorts+Mill+Goudy:ital@0;1&family=League+Spartan:wght@500;600;700&family=Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:

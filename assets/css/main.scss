@@ -1,0 +1,566 @@
+---
+# Local override of al_folio_core's main.scss.
+# Replicates the theme's @use graph, then appends site-specific overrides
+# at the end so the base theme stays intact across gem updates.
+# Only the main Sass file needs front matter (the dashes are enough).
+---
+@charset "utf-8";
+
+/* Built-in Sass modules used across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure design tokens BEFORE loading partials. */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }}
+);
+
+/* Theme partials (resolve to the al_folio_core gem's _sass/). */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* -------------------------------------------------------------------------
+   SITE OVERRIDES — peterhazlett.com
+   Palette: forest/pine green accent on a warm off-white, with soft charcoal
+   text. These redefine the theme's CSS custom properties, which cascade
+   site-wide: links, your name, the active nav item, heading accents, the
+   "cite" buttons on the research page, and the Reading List toggles.
+
+   Selectors mirror al_folio_core's _themes.scss exactly:
+     :root                 -> light mode
+     html[data-theme=dark] -> dark mode
+   ------------------------------------------------------------------------- */
+
+/* Light mode (default) */
+:root {
+  --global-bg-color: #fbf8f3; /* warm off-white */
+  --global-text-color: #2b2b2b; /* soft charcoal */
+  --global-text-color-light: #6f6f6a; /* muted warm grey for dates/captions */
+  --global-theme-color: #1f5d43; /* forest / pine green accent (primary) */
+  --global-hover-color: #164632; /* slightly darker green for hover */
+  --global-divider-color: rgba(43, 43, 43, 0.12);
+
+  /* Secondary accent palette — contrast-checked vs the cream background (all
+     pass WCAG AA as link text). Reusable for paper-link types, badges, etc.
+     Assign to specific elements later. */
+  --accent-amber: #b8860b; /* standard */
+  --accent-magenta: #990d83; /* deeper */
+  --accent-navy: #15305a; /* deeper */
+  --accent-purple: #56298f; /* deeper */
+  --accent-maroon: #8a1f2b; /* standard */
+}
+
+/* Dark mode: brighter, slightly more saturated accents stay legible on the
+   dark background (#1c1c1d). Same lift we apply to the forest green. Note that
+   navy/maroon necessarily read as a sky-blue / rose here — a true dark navy or
+   maroon can't be legible on near-black, so they keep hue, not darkness. */
+html[data-theme="dark"] {
+  --global-theme-color: #4cae86; /* brighter pine */
+  --global-hover-color: #66c79d;
+
+  --accent-amber: #e0a82e;
+  --accent-magenta: #e85fce;
+  --accent-navy: #6f9ce0;
+  --accent-purple: #b18cf0;
+  --accent-maroon: #e06a78;
+}
+
+/* -------------------------------------------------------------------------
+   TYPOGRAPHY — Teachers (body) + Sorts Mill Goudy (headings)
+   Loaded via the Google Fonts URL in _config.yml. The theme sets the body to
+   Roboto and headings to `inherit`; we override the body to the sans and set
+   headings (incl. the site name, an h1.post-title) and the nav to the serif.
+
+   NOTE: Sorts Mill Goudy ships ONLY in a regular (400) weight on Google Fonts.
+   The theme applies font-weight 300/700 to headings, which would force the
+   browser to SYNTHESIZE a faux bold (smeared/heavier than designed). So we pin
+   heading weight to 400 and disable synthesis for a crisp, as-designed render.
+   Teachers (body) has real 400/500/600/700 + italic, so emphasis renders true.
+   ------------------------------------------------------------------------- */
+
+body {
+  font-family: "Teachers", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.nav-link,
+.navbar-brand {
+  font-family: "Sorts Mill Goudy", Georgia, "Times New Roman", serif;
+  font-weight: 400; /* Goudy has only one weight; avoid faux-bold */
+  font-synthesis: none; /* render the true face, no synthetic bold/italic */
+}
+
+/* -------------------------------------------------------------------------
+   CONTACT PAGE — centered contact block.
+   ------------------------------------------------------------------------- */
+.contact-block {
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------
+   COACHING PAGE — description + Tennis CV button on one line (\hfill).
+   The text span carries the theme's `.post-description` class so its font,
+   size, and color match the description on Research/Teaching exactly; we just
+   lay it beside the button and keep the row's bottom margin equal to the
+   theme's description spacing (2rem). align-items:end keeps the small text
+   sitting on the same baseline-ish line as the button.
+   ------------------------------------------------------------------------- */
+.coaching-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem; /* match the theme's .post-description spacing */
+}
+.coaching-intro .coaching-intro-text {
+  margin-bottom: 0; /* the row owns the spacing; cancel the element's own 2rem */
+}
+.coaching-intro .ti-btn {
+  margin-right: 0;
+  flex: none;
+}
+
+/* -------------------------------------------------------------------------
+   CV PAGE — custom layout (sections + right-aligned dates).
+   ------------------------------------------------------------------------- */
+.cv-page {
+  margin-top: 1.5rem;
+}
+.cv-page h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+.cv-page h2:first-of-type {
+  margin-top: 1.5rem;
+}
+/* Bold sub-labels within a section (e.g. "Graduate Lecturer, ..."). */
+.cv-page > p > strong,
+.cv-page p strong {
+  font-weight: 700;
+}
+
+/* An entry row: left-hand content, right-aligned date (\hfill style). */
+.cv-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+.cv-entry .cv-left {
+  flex: 1 1 auto;
+}
+.cv-entry .cv-org {
+  font-weight: 700;
+}
+.cv-entry .cv-role {
+  color: var(--global-text-color);
+}
+.cv-entry .cv-date {
+  flex: none;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Publications list on the CV. */
+.cv-page .cv-list ul {
+  padding-left: 1.4rem;
+  margin: 0.4rem 0;
+}
+.cv-page .cv-list li {
+  margin: 0.45rem 0;
+  line-height: 1.5;
+}
+.cv-page .cv-list li a {
+  color: var(--global-theme-color);
+}
+
+/* Referee experience: a justified prose block. */
+.cv-referee {
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------------------------
+   ABOUT PAGE
+   ------------------------------------------------------------------------- */
+
+/* Subtitle (the "Assistant Professor of Economics, Salve Regina University"
+   line under the name) in the sub-heading font — uppercase, back to a modest
+   size close to the theme default. */
+.about .desc,
+.post .desc,
+.desc {
+  font-family: "League Spartan", -apple-system, "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.15rem;
+}
+
+/* Salve Regina University in the subtitle -> navy (school colors). */
+.desc a.school-salve,
+a.school-salve {
+  color: var(--accent-navy);
+}
+
+/* Address block (more_info) in the sub-heading font (League Spartan).
+   NOTE: the theme uses `.profile .more-info { font-family: monospace }` — a
+   two-class selector — so we must match its specificity to win the cascade. */
+.profile .more-info {
+  font-family: "League Spartan", -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Smaller social icons (moved into the profile column, under the address).
+   NOTE: the theme sets `.social .contact-icons { font-size: 4rem }` — a
+   two-class selector — so a bare `.contact-icons` is too weak. Match it. */
+.social .contact-icons {
+  font-size: 1.5rem;
+}
+/* The social block now lives in the profile column; center it under the
+   address with a little breathing room above. */
+.profile .profile-social {
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------
+   RESEARCH PAGE
+   ------------------------------------------------------------------------- */
+
+/* Full-width presenting-photo banner atop the page (option A). Scoped to
+   .research-banner so it affects no other image. The photo crops to a band. */
+.research-banner {
+  margin: 0 0 2rem;
+}
+.research-banner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center 36%; /* crop start so first readable slide line is "The Church of England's..." */
+  border-radius: 8px;
+  display: block;
+}
+
+/* Color-code the per-paper link buttons: Abs -> maroon, DOI -> amber,
+   Bib -> navy, HTML -> forest green. Colors auto-swap in dark mode.
+   Style: SOFT TINT — accent-colored text on a faint wash of the same color and
+   a hairline border. Keeps the color-coding but far quieter than solid fills.
+   Hover deepens the tint. Tints are derived from the accent vars with
+   color-mix() so they track the brighter dark-mode accents automatically.
+   NOTE: the theme styles these with `.publications ol.bibliography li .links
+   a.btn { color/border: ... }` (5-level selector), so we match that specificity
+   and add the type class to win. `.abstract`/`.bibtex` are gem-provided;
+   `.link-doi`/`.link-html` come from the local _layouts/bib.liquid override. */
+.publications ol.bibliography li .links a.abstract.btn,
+.publications ol.bibliography li .links a.link-doi.btn,
+.publications ol.bibliography li .links a.bibtex.btn,
+.publications ol.bibliography li .links a.link-html.btn {
+  font-weight: 600;
+}
+
+.publications ol.bibliography li .links a.abstract.btn {
+  color: var(--accent-maroon);
+  background-color: color-mix(in srgb, var(--accent-maroon) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent-maroon) 22%, transparent);
+}
+.publications ol.bibliography li .links a.link-doi.btn {
+  /* deeper gold for the TEXT (amber-on-amber-tint is low contrast) */
+  color: color-mix(in srgb, var(--accent-amber) 78%, #000);
+  background-color: color-mix(in srgb, var(--accent-amber) 16%, transparent);
+  border-color: color-mix(in srgb, var(--accent-amber) 26%, transparent);
+}
+.publications ol.bibliography li .links a.bibtex.btn {
+  color: var(--accent-navy);
+  background-color: color-mix(in srgb, var(--accent-navy) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent-navy) 22%, transparent);
+}
+.publications ol.bibliography li .links a.link-html.btn {
+  color: var(--global-theme-color); /* forest green (primary) */
+  background-color: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
+  border-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+}
+
+/* Hover: deepen the tint slightly (keeps text color from the rules above). */
+.publications ol.bibliography li .links a.abstract.btn:hover {
+  background-color: color-mix(in srgb, var(--accent-maroon) 22%, transparent);
+  color: var(--accent-maroon);
+}
+.publications ol.bibliography li .links a.link-doi.btn:hover {
+  background-color: color-mix(in srgb, var(--accent-amber) 28%, transparent);
+  color: color-mix(in srgb, var(--accent-amber) 78%, #000);
+}
+.publications ol.bibliography li .links a.bibtex.btn:hover {
+  background-color: color-mix(in srgb, var(--accent-navy) 22%, transparent);
+  color: var(--accent-navy);
+}
+.publications ol.bibliography li .links a.link-html.btn:hover {
+  background-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+  color: var(--global-theme-color);
+}
+
+/* Bold the paper titles. */
+.publications ol.bibliography li .title {
+  font-weight: 700;
+}
+
+/* Reduce the entry indent. The theme lays each paper out as a Bootstrap row with
+   an empty `.col-sm-2 .abbr` left column (meant for a year/preview image)
+   reserving ~16.7% of width — far too much indent. Collapse that empty column,
+   then give the content column a small explicit padding for a gentle indent.
+   (Bootstrap's `.col-sm-2` width lives in a @media block, so we collapse the
+   abbr column and control the indent directly on the content column instead.) */
+.publications ol.bibliography li .col.col-sm-2.abbr {
+  flex: 0 0 0;
+  max-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+.publications ol.bibliography li .col-sm-8 {
+  flex: 1 1 auto;
+  max-width: none;
+  padding-left: 1.5rem; /* gentle indent for the whole entry */
+}
+
+/* Indent the author / periodical / links lines under each title. */
+.publications ol.bibliography li .author,
+.publications ol.bibliography li .periodical,
+.publications ol.bibliography li .links {
+  padding-left: 1.25rem;
+}
+
+/* More breathing room before each section heading. */
+.publications .bibliography-section {
+  margin-top: 3rem;
+}
+.publications .bibliography-section:first-of-type {
+  margin-top: 1rem; /* but not an oversized gap above the very first section */
+}
+
+/* Sub-heading labels (e.g. term labels on the Teaching page: "Spring 2026").
+   League Spartan in an uppercase, letter-spaced treatment — a structural label
+   that's clearly distinct from the serif content headings above it. */
+.term-label {
+  font-family: "League Spartan", -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--global-text-color); /* default text color, not the green accent */
+  margin: 1.6rem 0 0.5rem;
+}
+
+/* -------------------------------------------------------------------------
+   TEACHING PAGE — course rows with inline Syllabus + Reading List buttons.
+   Syllabus = navy tint button, Reading List = green tint toggle button.
+   Reading-list works = forest-green links with D2 (larger black dot) bullets.
+   ------------------------------------------------------------------------- */
+
+/* More breathing room before each content section heading (the `## School`
+   headings on Teaching, and the section headings on Coaching). The theme gives
+   h2 only a bottom margin; add a top margin. Research's section headers use the
+   more specific `.bibliography-section` rule, so they keep their own spacing. */
+.post h2 {
+  margin-top: 2.75rem;
+}
+.post h2:first-of-type {
+  margin-top: 1rem; /* don't over-pad the very first heading on a page */
+}
+
+/* All courses in a term share ONE grid so the buttons align in vertical
+   columns ACROSS rows (not per-row):
+     [ course name (1fr → hfill) | Syllabus (col 2) | Reading List (col 3) ].
+   `.term-courses` is the grid; `.course` and `.course-line` use display:contents
+   so their cells (name, Syllabus, Reading List / empty slot) land directly in
+   the shared grid tracks. The `.reading-list` is a separate child that spans all
+   columns and drops full-width below its row when toggled open. */
+.term-courses {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: baseline;
+  column-gap: 0.4rem;
+  row-gap: 0.55rem;
+  padding-left: 1.25rem; /* indent courses under the term label */
+  margin: 0.4rem 0;
+}
+.course,
+.course-line {
+  display: contents;
+}
+.term-courses .course-name {
+  grid-column: 1;
+}
+.term-courses .rl-slot {
+  display: block; /* empty column-3 placeholder keeps the grid shape */
+}
+/* The reading list spans the full grid width, on its own row below the course. */
+.term-courses .reading-list {
+  grid-column: 1 / -1;
+}
+
+/* Reading List toggle button (the maroon... no: green tint) lives in column 3. */
+.rl-toggle {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.34rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(--global-theme-color);
+  background-color: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 24%, transparent);
+}
+.rl-toggle:hover {
+  background-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+}
+.rl-toggle::after {
+  content: " \25be";
+  font-size: 0.85em;
+}
+.rl-toggle[aria-expanded="true"]::after {
+  content: " \25b4";
+}
+
+/* The reading list: hidden until toggled; spans full width when shown. */
+.reading-list {
+  display: none;
+}
+.reading-list.open {
+  display: block;
+}
+.reading-list ul {
+  list-style: none;
+  padding-left: 1.6rem;
+  margin: 0.6rem 0 0.4rem;
+}
+.reading-list ul li {
+  position: relative;
+  margin: 0.3rem 0;
+  line-height: 1.55;
+}
+.reading-list ul li::before {
+  content: "\2022";
+  position: absolute;
+  left: -1.2rem;
+  top: -0.04em;
+  font-size: 1.4em; /* D2 = larger dot */
+  color: var(--global-text-color);
+}
+.reading-list ul li a {
+  color: var(--global-theme-color); /* forest-green links (L3) */
+}
+
+/* Shared soft-tint button (matches the research-page link buttons). */
+.ti-btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.34rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.ti-syllabus {
+  color: var(--accent-navy); /* navy (provisional — deciding navy vs maroon) */
+  background-color: color-mix(in srgb, var(--accent-navy) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent-navy) 24%, transparent);
+}
+.ti-syllabus:hover {
+  background-color: color-mix(in srgb, var(--accent-navy) 22%, transparent);
+  color: var(--accent-navy);
+}
+
+/* Generic green tint button (e.g. the Tennis CV button on the Coaching page). */
+.ti-green {
+  color: var(--global-theme-color); /* forest green */
+  background-color: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
+  border-color: color-mix(in srgb, var(--global-theme-color) 24%, transparent);
+}
+.ti-green:hover {
+  background-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+  color: var(--global-theme-color);
+}
+
+
+/* Reading List is a <details>; its <summary> is styled as the maroon toggle
+   button and sits inline next to the Syllabus button. */
+details.ti-rl {
+  display: inline;
+}
+details.ti-rl > summary {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.34rem 0.7rem;
+  border-radius: 4px;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: var(--global-theme-color); /* forest green */
+  background-color: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 24%, transparent);
+}
+details.ti-rl > summary::-webkit-details-marker {
+  display: none;
+}
+details.ti-rl > summary::after {
+  content: " \25be"; /* down caret */
+  font-size: 0.85em;
+}
+details.ti-rl[open] > summary::after {
+  content: " \25b4"; /* up caret */
+}
+details.ti-rl > summary:hover {
+  background-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+}
+
+/* The reading list itself — D2 bullets (larger black dot), forest-green links. */
+details.ti-rl ul {
+  list-style: none;
+  padding-left: 1.6rem;
+  margin: 0.6rem 0 1rem;
+}
+details.ti-rl ul li {
+  position: relative;
+  margin: 0.3rem 0;
+  line-height: 1.55;
+}
+details.ti-rl ul li::before {
+  content: "\2022"; /* bullet */
+  position: absolute;
+  left: -1.2rem;
+  top: -0.04em;
+  font-size: 1.4em; /* D2 = larger dot */
+  color: var(--global-text-color);
+}
+details.ti-rl ul li a {
+  color: var(--global-theme-color); /* forest-green links (L3) */
+}
