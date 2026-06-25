@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://peterhazlett.com/sitemap.xml
