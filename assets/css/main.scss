@@ -306,7 +306,8 @@ a.school-salve {
 .publications ol.bibliography li .links a.abstract.btn,
 .publications ol.bibliography li .links a.link-doi.btn,
 .publications ol.bibliography li .links a.bibtex.btn,
-.publications ol.bibliography li .links a.link-html.btn {
+.publications ol.bibliography li .links a.link-html.btn,
+.publications ol.bibliography li .links a.link-pdf.btn {
   font-weight: 600;
 }
 
@@ -331,6 +332,11 @@ a.school-salve {
   background-color: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
   border-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
 }
+.publications ol.bibliography li .links a.link-pdf.btn {
+  color: var(--accent-purple);
+  background-color: color-mix(in srgb, var(--accent-purple) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent-purple) 22%, transparent);
+}
 
 /* Hover: deepen the tint slightly (keeps text color from the rules above). */
 .publications ol.bibliography li .links a.abstract.btn:hover {
@@ -348,6 +354,10 @@ a.school-salve {
 .publications ol.bibliography li .links a.link-html.btn:hover {
   background-color: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
   color: var(--global-theme-color);
+}
+.publications ol.bibliography li .links a.link-pdf.btn:hover {
+  background-color: color-mix(in srgb, var(--accent-purple) 22%, transparent);
+  color: var(--accent-purple);
 }
 
 /* Bold the paper titles. */
