@@ -243,6 +243,23 @@ a.school-salve {
   text-align: center;
 }
 
+/* On mobile the profile column (photo + address + icons) otherwise stacks ABOVE
+   the bio. Flip the order so the bio paragraphs come first, then the photo/
+   address/icons below. Desktop (where .profile floats right) is untouched. */
+@media (max-width: 575px) {
+  .post > article {
+    display: flex;
+    flex-direction: column;
+  }
+  .post > article .profile {
+    order: 2;
+    margin-top: 1.5rem;
+  }
+  .post > article .clearfix {
+    order: 1;
+  }
+}
+
 /* -------------------------------------------------------------------------
    RESEARCH PAGE
    ------------------------------------------------------------------------- */
@@ -258,6 +275,22 @@ a.school-salve {
   height: auto;
   border-radius: 8px;
   display: block;
+}
+/* On narrow screens the full-width image gets short; rather than shrink the
+   whole photo (which makes the subject tiny), crop it to a fixed band and
+   anchor the RIGHT edge — so the crop eats into the LEFT of the photo and keeps
+   me (right side of frame) visible. */
+@media (max-width: 700px) {
+  .research-banner img {
+    height: 260px;
+    object-fit: cover;
+    object-position: right center; /* keep right edge; crop the left */
+  }
+}
+@media (max-width: 480px) {
+  .research-banner img {
+    height: 220px;
+  }
 }
 
 /* Color-code the per-paper link buttons: Abs -> maroon, DOI -> amber,
