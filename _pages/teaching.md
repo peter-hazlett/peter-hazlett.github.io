@@ -46,7 +46,7 @@ nav_order: 3
 
 <div class="term-courses">
 
-<div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_intro-micro_2025-3.pdf">Syllabus</a><span class="rl-slot"></span></div></div>
+<div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
 
 <div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_money-banking_2025-3.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
 

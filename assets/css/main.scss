@@ -455,6 +455,13 @@ a.school-salve {
 .term-courses .rl-slot {
   display: block; /* empty column-3 placeholder keeps the grid shape */
 }
+/* Same idea for column 2, used when a course has no current syllabus posted.
+   Only the most recently taught offering of a course keeps its syllabus link;
+   older offerings stay listed with this empty slot so the Syllabus and Reading
+   List buttons stay aligned in their columns across every row. */
+.term-courses .syl-slot {
+  display: block;
+}
 /* The reading list spans the full grid width, on its own row below the course. */
 .term-courses .reading-list {
   grid-column: 1 / -1;
