@@ -22,6 +22,10 @@ nav_order: 6
 
 <div class="cv-entry"><span class="cv-left"><span class="cv-org">Kenyon College</span>, Gambier, OH<br><span class="cv-role">B.A., Economics and Mathematics, 2018 &nbsp;|&nbsp; Minor: Philosophy</span></span><span class="cv-date">2014 – 2018</span></div>
 
+## Editorial Positions
+
+<div class="cv-entry"><span class="cv-left">Guest Editor, <em>European Economic Review</em><br><span class="cv-role">Special Issue: <em>State, Society, and Institutional Order: The Enduring Legacy of James C. Scott</em></span></span><span class="cv-date">2025</span></div>
+
 ## Publications
 
 <div class="cv-list" markdown="1">
@@ -39,7 +43,8 @@ nav_order: 6
 **Assistant Professor, Salve Regina University**
 
 <div class="cv-entry"><span class="cv-left">ECN-102: Introductory Microeconomics</span><span class="cv-date">Fall 2025 (×2), Spring 2026 (×3)</span></div>
-<div class="cv-entry"><span class="cv-left">ECN-305: Money and Banking</span><span class="cv-date">Fall 2025</span></div>
+<div class="cv-entry"><span class="cv-left">ECN-202: Intermediate Microeconomics</span><span class="cv-date">Fall 2026</span></div>
+<div class="cv-entry"><span class="cv-left">ECN-305: Money and Banking</span><span class="cv-date">Fall 2025, Fall 2026 (×2)</span></div>
 <div class="cv-entry"><span class="cv-left">ECN-317: Economic Ideas in Historical Perspective</span><span class="cv-date">Spring 2026</span></div>
 
 **Graduate Lecturer, George Mason University**
@@ -49,8 +54,17 @@ nav_order: 6
 <div class="cv-entry"><span class="cv-left">ECON 309: Economic Problems and Public Policies</span><span class="cv-date">Fall 2020</span></div>
 <div class="cv-entry"><span class="cv-left">ECON 412: Game Theory and Economics of Institutions</span><span class="cv-date">Spring 2021</span></div>
 
+## Service
+
+**Assistant Professor, Salve Regina University**
+
+<div class="cv-entry"><span class="cv-left">Scholarship Sharing Committee</span><span class="cv-date">Fall 2026 – Present</span></div>
+<div class="cv-entry"><span class="cv-left">Course Evaluation Task Force</span><span class="cv-date">Fall 2026 – Present</span></div>
+<div class="cv-entry"><span class="cv-left">Men's Soccer Faculty Mentor</span><span class="cv-date">Fall 2025 – Present</span></div>
+
 ## Awards, Honors, and Fellowships
 
+<div class="cv-entry"><span class="cv-left">Grant for Undergraduate Programming (with Adam Witham) | <em>Institute for Humane Studies</em></span><span class="cv-date">2026 – 2027</span></div>
 <div class="cv-entry"><span class="cv-left">Educational Entrepreneurs Grant (IHS019744) | <em>Institute for Humane Studies</em></span><span class="cv-date">2025</span></div>
 <div class="cv-entry"><span class="cv-left">SDAE Prize for the Best Article in Austrian Economics (“The Redistributive Politics of Monetary Policy”) | <em>Society for the Development of Austrian Economics</em></span><span class="cv-date">2023</span></div>
 <div class="cv-entry"><span class="cv-left">William P. Snavely Award for Outstanding Achievement in Graduate Studies in Economics | <em>Department of Economics, George Mason University</em></span><span class="cv-date">2023</span></div>
@@ -68,7 +82,7 @@ nav_order: 6
 ## Referee Experience
 
 <div class="cv-referee" markdown="1">
-*European Economic Review*; *Public Choice* [8]; *Journal of International Financial Markets, Institutions & Money*; *Quarterly Review of Economics and Finance* [3]; *Journal of Institutional Economics* [3]; *Review of Behavioral Economics*; *Review of Austrian Economics*; *The Independent Review* [2]; *Cosmos + Taxis: Studies in Emergent Order and Organization*.
+*European Economic Review*; *Public Choice* [8]; *Journal of International Financial Markets, Institutions & Money*; *Cambridge Journal of Economics*; *Quarterly Review of Economics and Finance* [3]; *Journal of Institutional Economics* [3]; *Review of Behavioral Economics*; *Review of Austrian Economics*; *The Independent Review* [2]; *Cosmos + Taxis: Studies in Emergent Order and Organization*.
 </div>
 
 ## Skills

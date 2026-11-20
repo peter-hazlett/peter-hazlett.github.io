@@ -10,7 +10,8 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Jean and David W. Wallace Department of Business &amp; Economics</p>
-    <p>100 Ochre Point Avenue</p>
+    <p>O'Hare Academic Center</p>
+    <p>36 Ochre Point Avenue</p>
     <p>Newport, RI 02840</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"

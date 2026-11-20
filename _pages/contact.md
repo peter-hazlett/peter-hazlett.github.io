@@ -14,7 +14,8 @@ nav_order: 5
 
 Salve Regina University<br>
 Jean and David W. Wallace Department of Business and Economics<br>
-100 Ochre Point Avenue<br>
+O'Hare Academic Center<br>
+36 Ochre Point Avenue<br>
 Newport, RI 02840
 
 </div>
