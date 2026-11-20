@@ -9,6 +9,45 @@ nav_order: 3
 
 ## Salve Regina University
 
+<p class="term-label">Fall 2026</p>
+
+<div class="term-courses">
+
+<div class="course"><div class="course-line"><span class="course-name">ECN-202: Intermediate Microeconomics</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_intermediate-micro_2026-3.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
+
+- *[Human Action](https://oll.libertyfund.org/titles/greaves-human-action-a-treatise-on-economics-vol-1-lf-ed)* by Ludwig von Mises
+- “[Uncertainty, Evolution, and Economic Theory](https://www.jstor.org/stable/1827159)” by Armen A. Alchian
+- “[The Methodology of Positive Economics](https://www.cambridge.org/core/books/methodology-of-positive-economics/methodology-of-positive-economics-1953/CFF7143A05C9A667D3E54E9AD747A98A)” by Milton Friedman
+- “[De Gustibus Non Est Disputandum](https://www.jstor.org/stable/1807222)” by George J. Stigler and Gary S. Becker
+- *The Economic Approach to Human Behavior* by Gary S. Becker
+- “[The Marshallian Demand Curve](https://www.jstor.org/stable/1826553)” by Milton Friedman
+- “[Irrational Behavior and Economic Theory](https://www.jstor.org/stable/1827018)” by Gary S. Becker
+- “[The Nature of the Firm](https://www.jstor.org/stable/2626876)” by Ronald H. Coase
+- “[The Problem of Social Cost](https://www.jstor.org/stable/724810)” by Ronald H. Coase
+- “[Production, Information Costs, and Economic Organization](https://www.jstor.org/stable/1815199)” by Armen A. Alchian and Harold Demsetz
+- “[Why Regulate Utilities?](https://www.jstor.org/stable/724970)” by Harold Demsetz
+- “[The Theory of Economic Regulation](https://www.jstor.org/stable/3003160)” by George J. Stigler
+- “[Predatory Price Cutting: The Standard Oil (N.J.) Case](https://www.jstor.org/stable/724888)” by John S. McGee
+- *[Risk, Uncertainty and Profit](https://www.econlib.org/library/Knight/knRUP.html)* by Frank H. Knight
+- “[The Economics of Information](https://www.jstor.org/stable/1829263)” by George J. Stigler
+- “[The Exchange and Enforcement of Property Rights](https://www.jstor.org/stable/724917)” by Harold Demsetz
+- “[Toward a Theory of Property Rights](https://www.jstor.org/stable/1821637)” by Harold Demsetz
+- “[Measurement Cost and the Organization of Markets](https://www.jstor.org/stable/725223)” by Yoram Barzel
+
+</div></div>
+
+<div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_money-banking_2026-3.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
+
+- *[The Ascent of Money](https://www.penguinrandomhouse.com/books/302900/the-ascent-of-money-by-niall-ferguson/)* by Niall Ferguson
+- *[The Money Illusion](https://press.uchicago.edu/ucp/books/book/chicago/M/bo85902197.html)* by Scott Sumner
+- *[Fragile by Design](https://www.jstor.org/stable/j.ctt5hhpfs)* by Charles W. Calomiris & Stephen H. Haber
+- “[Free Banking in Scotland before 1844](https://iea.org.uk/wp-content/uploads/2023/12/Dowd-Free-Banking-Interactive.pdf)” by Lawrence H. White
+- *[Better Money](https://www.cambridge.org/core/books/better-money/8B6D08E245653C381C9D3222028804AF)* by Lawrence H. White
+
+</div></div>
+
+</div>
+
 <p class="term-label">Spring 2026</p>
 
 <div class="term-courses">
@@ -48,7 +87,7 @@ nav_order: 3
 
 <div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
 
-<div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_money-banking_2025-3.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
+<div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><span class="syl-slot"></span><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
 
 - *[The Ascent of Money](https://www.penguinrandomhouse.com/books/302900/the-ascent-of-money-by-niall-ferguson/)* by Niall Ferguson
 - *[Fragile by Design](https://www.jstor.org/stable/j.ctt5hhpfs)* by Charles W. Calomiris & Stephen H. Haber
