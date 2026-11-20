@@ -87,14 +87,7 @@ nav_order: 3
 
 <div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
 
-<div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><span class="syl-slot"></span><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
-
-- *[The Ascent of Money](https://www.penguinrandomhouse.com/books/302900/the-ascent-of-money-by-niall-ferguson/)* by Niall Ferguson
-- *[Fragile by Design](https://www.jstor.org/stable/j.ctt5hhpfs)* by Charles W. Calomiris & Stephen H. Haber
-- “[Rethinking the Fed’s Framework: Lessons from the Post-Pandemic Inflation](https://aier.org/wp-content/uploads/2025/06/AIER_Whitepaper-10_Rethinking-the-Feds-Framework.pdf)” by Bryan P. Cutsinger
-- *[Better Money](https://www.cambridge.org/core/books/better-money/8B6D08E245653C381C9D3222028804AF)* by Lawrence H. White
-
-</div></div>
+<div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
 
 </div>
 
