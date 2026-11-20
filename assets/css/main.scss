@@ -429,7 +429,8 @@ a.school-salve {
   margin-top: 1rem; /* don't over-pad the very first heading on a page */
 }
 
-/* All courses in a term share ONE grid so the buttons align in vertical
+/* All courses at a school share ONE grid (one list per school, sorted by
+   course number; semesters are left to the CV) so the buttons align in vertical
    columns ACROSS rows (not per-row):
      [ course name (1fr → hfill) | Syllabus (col 2) | Reading List (col 3) ].
    `.term-courses` is the grid; `.course` and `.course-line` use display:contents
@@ -442,7 +443,6 @@ a.school-salve {
   align-items: baseline;
   column-gap: 0.4rem;
   row-gap: 0.55rem;
-  padding-left: 1.25rem; /* indent courses under the term label */
   margin: 0.4rem 0;
 }
 .course,
@@ -456,9 +456,8 @@ a.school-salve {
   display: block; /* empty column-3 placeholder keeps the grid shape */
 }
 /* Same idea for column 2, used when a course has no current syllabus posted.
-   Only the most recently taught offering of a course keeps its syllabus link;
-   older offerings stay listed with this empty slot so the Syllabus and Reading
-   List buttons stay aligned in their columns across every row. */
+   The empty slot keeps the Syllabus and Reading List buttons aligned in their
+   columns across every row. */
 .term-courses .syl-slot {
   display: block;
 }

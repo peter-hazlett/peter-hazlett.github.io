@@ -9,9 +9,9 @@ nav_order: 3
 
 ## Salve Regina University
 
-<p class="term-label">Fall 2026</p>
-
 <div class="term-courses">
+
+<div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_intro-micro_2026-1.pdf">Syllabus</a><span class="rl-slot"></span></div></div>
 
 <div class="course"><div class="course-line"><span class="course-name">ECN-202: Intermediate Microeconomics</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_intermediate-micro_2026-3.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
 
@@ -46,14 +46,6 @@ nav_order: 3
 
 </div></div>
 
-</div>
-
-<p class="term-label">Spring 2026</p>
-
-<div class="term-courses">
-
-<div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_intro-micro_2026-1.pdf">Syllabus</a><span class="rl-slot"></span></div></div>
-
 <div class="course"><div class="course-line"><span class="course-name">ECN-317: Economic Ideas in Historical Perspective</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/salve_history-of-economic-thought_2026-1.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
 
 - “[Does Economics Have a Useful Past?](https://read.dukeupress.edu/hope/article-abstract/1/2/217/11359/Does-Economics-Have-a-Useful-Past?redirectedFrom=PDF)” by George J. Stigler
@@ -81,59 +73,13 @@ nav_order: 3
 
 </div>
 
-<p class="term-label">Fall 2025</p>
-
-<div class="term-courses">
-
-<div class="course"><div class="course-line"><span class="course-name">ECN-102: Introductory Microeconomics</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
-
-<div class="course"><div class="course-line"><span class="course-name">ECN-305: Money and Banking</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
-
-</div>
-
 ## George Mason University
 
-<p class="term-label">Spring 2021</p>
-
 <div class="term-courses">
 
-<div class="course"><div class="course-line"><span class="course-name">ECON 103: Contemporary Microeconomic Principles</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/gmu_intro-micro_2021-1.pdf">Syllabus</a><span class="rl-slot"></span></div></div>
+<div class="course"><div class="course-line"><span class="course-name">ECON 103: Contemporary Microeconomic Principles</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
 
-<div class="course"><div class="course-line"><span class="course-name">ECON 412: Game Theory and Economics of Institutions</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/gmu_game-theory_2021-1.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
-
-- *[Games of Strategy](https://wwnorton.com/books/Games-of-Strategy/)* by Avinash Dixit, Susan Skeath, and David McAdams
-- *[Institutions, Institutional Change and Economic Performance](https://www.cambridge.org/core/books/institutions-institutional-change-and-economic-performance/AAE1E27DF8996E24C5DD07EB79BBA7EE)* by Douglass C. North
-- “[Do Institutions Cause Growth?](https://scholar.harvard.edu/files/shleifer/files/do_institutions_cause_growth.pdf)” by Edward L. Glaeser, Rafael La Porta, Florencio Lopez-de-Silanes, and Andrei Shleifer
-- “[The Deadliest of Games: The Institution of Dueling](https://www.jstor.org/stable/27866745)” by Christopher Kingston and Robert E. Wright
-- “[Institutional Stickiness and the New Development Economics](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1536-7150.2008.00573.x)” by Peter J. Boettke, Christopher J. Coyne, and Peter T. Leeson
-- “[Informal Institutions Rule: Institutional Arrangements and Economic Performance](https://www.jstor.org/stable/40270896)” by Claudia Williamson
-- “[Gypsy Law](https://www.jstor.org/stable/42003101)” by Peter T. Leeson
-- “[The Role of Institutions in the Revival of Trade](https://web.stanford.edu/~milgrom/publishedarticles/The%20Role%20of%20Institutions%20in%20the%20Revival%20of%20Trade,%201990.pdf)” by Paul R. Milgrom, Douglass C. North, and Barry R. Weingast
-- “[The Spontaneous Evolution of Commercial Law](https://www.jstor.org/stable/1059579)” by Bruce L. Benson
-- “[Oracles](https://journals.sagepub.com/doi/abs/10.1177/1043463113512997)” by Peter T. Leeson
-- “[Ordeals](https://www.jstor.org/stable/10.1086/664010)” by Peter T. Leeson
-- “[Government, Clubs, and Constitutions](https://www.sciencedirect.com/science/article/pii/S0167268111001260)” by Peter T. Leeson
-- “[The Infallibility of the Pope](https://link.springer.com/article/10.1007/s10101-010-0088-5)” by Mario Ferrero
-- “[The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development](https://www.jstor.org/stable/765068)” by Barry R. Weingast
-- “[Not so Different after All: A Cross-Discipline View of Trust](https://www.jstor.org/stable/259285)” by Denise M. Rousseau, Sim B. Sitkin, Ronald S. Burt, and Colin Camerer
-- “[Adam Smith and the Prisoners’ Dilemma](https://www.jstor.org/stable/1882937)” by Gordon Tullock
-- “[The Paradox of Revolution](https://www.jstor.org/stable/30022655)” by Gordon Tullock
-- “[Political Revolution and Repression: An Economic Approach](https://www.jstor.org/stable/30023153)” by Morris Silver
-- “[Dictatorship, Democracy, and Development](https://www.jstor.org/stable/2938736)” by Mancur Olson
-- “[An-arrgh-chy: The Law and Economics of Pirate Organization](https://www.journals.uchicago.edu/doi/abs/10.1086/526403)” by Peter T. Leeson
-- “[Trial by Battle](https://academic.oup.com/jla/article/3/1/341/857953)” by Peter T. Leeson
-- “[Constitutions and Commitment](https://www.jstor.org/stable/2122739)” by Douglass C. North and Barry R. Weingast
-- “[Institutions: Rules or Equilibria?](https://web.stanford.edu/~avner/Greif_Papers/2011%20rules%20or%20eq.pdf)” by Avner Greif and Christopher Kingston
-
-</div></div>
-
-</div>
-
-<p class="term-label">Fall 2020</p>
-
-<div class="term-courses">
-
-<div class="course"><div class="course-line"><span class="course-name">ECON 306: Intermediate Microeconomics</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/gmu_intermediate-micro_2020-3.pdf">Syllabus</a><span class="rl-slot"></span></div></div>
+<div class="course"><div class="course-line"><span class="course-name">ECON 306: Intermediate Microeconomics</span><span class="syl-slot"></span><span class="rl-slot"></span></div></div>
 
 <div class="course"><div class="course-line"><span class="course-name">ECON 309: Economic Problems and Public Policies</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/gmu_public-policy_2020-3.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
 
@@ -164,6 +110,34 @@ nav_order: 3
 - “[The Plight of Underdeveloped Countries](http://peterleeson.homestead.com/Plight_of_Underdeveloped_Countries.pdf)” by Christopher J. Coyne and Peter T. Leeson
 - “[Escaping Poverty: Foreign Aid, Property, and Economic Development](http://journal.apee.org/index.php?title=Spring2008_3)” by Peter T. Leeson
 - “More People, Greater Wealth, More Resources, Healthier Environment” by Julian L. Simon
+
+</div></div>
+
+<div class="course"><div class="course-line"><span class="course-name">ECON 412: Game Theory and Economics of Institutions</span><a class="ti-btn ti-syllabus" href="/assets/pdf/syllabi/gmu_game-theory_2021-1.pdf">Syllabus</a><span class="rl-toggle">Reading List</span></div><div class="reading-list" markdown="1">
+
+- *[Games of Strategy](https://wwnorton.com/books/Games-of-Strategy/)* by Avinash Dixit, Susan Skeath, and David McAdams
+- *[Institutions, Institutional Change and Economic Performance](https://www.cambridge.org/core/books/institutions-institutional-change-and-economic-performance/AAE1E27DF8996E24C5DD07EB79BBA7EE)* by Douglass C. North
+- “[Do Institutions Cause Growth?](https://scholar.harvard.edu/files/shleifer/files/do_institutions_cause_growth.pdf)” by Edward L. Glaeser, Rafael La Porta, Florencio Lopez-de-Silanes, and Andrei Shleifer
+- “[The Deadliest of Games: The Institution of Dueling](https://www.jstor.org/stable/27866745)” by Christopher Kingston and Robert E. Wright
+- “[Institutional Stickiness and the New Development Economics](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1536-7150.2008.00573.x)” by Peter J. Boettke, Christopher J. Coyne, and Peter T. Leeson
+- “[Informal Institutions Rule: Institutional Arrangements and Economic Performance](https://www.jstor.org/stable/40270896)” by Claudia Williamson
+- “[Gypsy Law](https://www.jstor.org/stable/42003101)” by Peter T. Leeson
+- “[The Role of Institutions in the Revival of Trade](https://web.stanford.edu/~milgrom/publishedarticles/The%20Role%20of%20Institutions%20in%20the%20Revival%20of%20Trade,%201990.pdf)” by Paul R. Milgrom, Douglass C. North, and Barry R. Weingast
+- “[The Spontaneous Evolution of Commercial Law](https://www.jstor.org/stable/1059579)” by Bruce L. Benson
+- “[Oracles](https://journals.sagepub.com/doi/abs/10.1177/1043463113512997)” by Peter T. Leeson
+- “[Ordeals](https://www.jstor.org/stable/10.1086/664010)” by Peter T. Leeson
+- “[Government, Clubs, and Constitutions](https://www.sciencedirect.com/science/article/pii/S0167268111001260)” by Peter T. Leeson
+- “[The Infallibility of the Pope](https://link.springer.com/article/10.1007/s10101-010-0088-5)” by Mario Ferrero
+- “[The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development](https://www.jstor.org/stable/765068)” by Barry R. Weingast
+- “[Not so Different after All: A Cross-Discipline View of Trust](https://www.jstor.org/stable/259285)” by Denise M. Rousseau, Sim B. Sitkin, Ronald S. Burt, and Colin Camerer
+- “[Adam Smith and the Prisoners’ Dilemma](https://www.jstor.org/stable/1882937)” by Gordon Tullock
+- “[The Paradox of Revolution](https://www.jstor.org/stable/30022655)” by Gordon Tullock
+- “[Political Revolution and Repression: An Economic Approach](https://www.jstor.org/stable/30023153)” by Morris Silver
+- “[Dictatorship, Democracy, and Development](https://www.jstor.org/stable/2938736)” by Mancur Olson
+- “[An-arrgh-chy: The Law and Economics of Pirate Organization](https://www.journals.uchicago.edu/doi/abs/10.1086/526403)” by Peter T. Leeson
+- “[Trial by Battle](https://academic.oup.com/jla/article/3/1/341/857953)” by Peter T. Leeson
+- “[Constitutions and Commitment](https://www.jstor.org/stable/2122739)” by Douglass C. North and Barry R. Weingast
+- “[Institutions: Rules or Equilibria?](https://web.stanford.edu/~avner/Greif_Papers/2011%20rules%20or%20eq.pdf)” by Avner Greif and Christopher Kingston
 
 </div></div>
 
